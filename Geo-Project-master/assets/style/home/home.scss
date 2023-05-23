@@ -1,0 +1,636 @@
+@import "../globalStyle/vars";
+@import "../globalStyle/template";
+@import "../globalStyle/header";
+@import "../globalStyle/maps";
+@import "../globalStyle/footer";
+
+// Author: Pavel
+
+.ore-price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  &__text {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $text-light-color;
+    &_green {
+      color: $price-green-color;
+    }
+    &_red {
+      color: $price-red-color;
+    }
+  }
+}
+
+.emp-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @media (max-width: $tablet-l) {
+    align-items: center;
+  }
+  &__img {
+    max-width: 508px;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 39px;
+    @media (max-width: $tablet-l) {
+      margin-bottom: 15px;
+    }
+  }
+  &__emp-name {
+    margin-bottom: 14px;
+    @media (max-width: $tablet-l) {
+      margin-bottom: 10px;
+    }
+    font-family: $font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    color: $text-light-color;
+  }
+  &__emp-text {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $text-light-color;
+    @media (max-width: $tablet-l) {
+      text-align: center;
+    }
+  }
+}
+
+.work-card {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  @media (max-width: $pc-s) {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+  &_reverse {
+    @media (max-width: $pc-s) {
+      flex-direction: column-reverse;
+      row-gap: 20px;
+      align-items: center;
+    }
+  }
+  &__img-wrapper {
+    flex-basis: 47%;
+    .work-card__img {
+      max-width: 751px;
+      &_less {
+        max-width: 740px;
+      }
+      width: 100%;
+      height: max-content;
+    }
+  }
+  &__info-wrapper {
+    flex-basis: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    row-gap: 20px;
+    @media (max-width: $pc-s) {
+      align-items: center;
+      text-align: center;
+    }
+    .work-card__headline {
+      padding-left: 10px;
+      border-left: 4px solid white;
+      @media (max-width: $pc-s) {
+        border-left: none;
+        padding-left: 0;
+      }
+      @include default-h($text-light-color);
+      @media (max-width: $phone-l) {
+        font-size: 30px;
+        line-height: 31px;
+      }
+      @media (max-width: $phone-m) {
+        font-size: 28px;
+        line-height: 29px;
+      }
+    }
+    .work-card__text {
+      padding-left: 10px;
+      @include default-p($text-light-color);
+    }
+    .work-card__btn-more {
+      margin-left: 10px;
+      @include default-btn(241px, $text-light-color, $btn-link-color, 10px);
+    }
+  }
+}
+
+.comp-plus-card {
+  max-width: 507px;
+  width: 100%;
+  padding: 35px 30px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #528dc9;
+  border-radius: 10px;
+  row-gap: 20px;
+  @media (max-width: $laptop-s) {
+    align-items: center;
+    text-align: center;
+  }
+  @media (max-width: $phone-l) {
+    padding: 35px 10px 38px;
+  }
+  &__img {
+    max-width: 74px;
+    width: 100%;
+    height: max-content;
+  }
+  &__headline {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    color: $text-light-color;
+    @media (max-width: $phone-l) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+  &__text {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: $text-light-color;
+    @media (max-width: $phone-l) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.global-container {
+  &__prices-wrapper {
+    @media (max-width: $pc-s) {
+      display: none;
+    }
+    background: #12161c;
+    .global-container__prices-container {
+      @extend %default-wrapper;
+      padding-block: 15px;
+      display: flex;
+      justify-content: flex-start;
+      column-gap: 112px;
+      @media (max-width: 1640px) {
+        // We need to set this paddings Only if we don't have enough space (not from the start)
+        padding-inline: 20px;
+      }
+    }
+  }
+  .main {
+    padding-bottom: 143px;
+    @media (max-width: $laptop-l) {
+      padding-bottom: 95px;
+    }
+    background-color: $home-bg-color;
+    &__container {
+      max-width: 1920px;
+      width: 100%;
+      margin-top: 0;
+      margin-inline: auto;
+      .main__video-section-container {
+        padding-block: 163px 217px;
+        margin-bottom: 147px;
+        background: linear-gradient(180deg, #5b7bb7 0%, #6196cb 100%);
+        @media (max-width: 1660px) {
+          padding: 100px 30px 135px;
+        }
+        @media (max-width: $pc-m) {
+          padding: 70px 30px 100px;
+        }
+        @media (max-width: $laptop-l) {
+          margin-bottom: 98px;
+        }
+        .main__video-section-wrapper {
+          @extend %default-wrapper;
+          display: flex;
+          justify-content: space-between;
+          column-gap: 20px;
+          @media (max-width: $pc-m) {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 30px;
+          }
+          .main__company-info-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            @media (max-width: $pc-m) {
+              align-items: center;
+            }
+            .main__company-info-headline {
+              margin-bottom: 24px;
+              max-width: 892px;
+              font-family: $font;
+              font-weight: 700;
+              font-size: 58px;
+              line-height: 55px;
+              color: $text-light-color;
+              @media (max-width: $pc-m) {
+                text-align: center;
+              }
+              @media (max-width: $tablet-l) {
+                font-size: 45px;
+                line-height: 46px;
+              }
+              @media (max-width: $phone-l) {
+                font-size: 30px;
+                line-height: 31px;
+              }
+              @media (max-width: $phone-m) {
+                font-size: 28px;
+                line-height: 29px;
+              }
+            }
+            .main__company-info-text {
+              max-width: 800px;
+              margin-bottom: 39px;
+              @include default-p($text-light-color);
+              @media (max-width: $pc-m) {
+                text-align: center;
+              }
+            }
+            .main__company-pluses-wrapper {
+              max-width: 830px;
+              margin-bottom: 35px;
+              display: flex;
+              justify-content: flex-start;
+              column-gap: 30px;
+              @media (max-width: $pc-m) {
+                justify-content: space-around;
+              }
+              @media (max-width: $tablet-l) {
+                display: grid;
+                row-gap: 30px;
+                column-gap: 30px;
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+              }
+              @media (max-width: $phone-l) {
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-columns: repeat(1, 1fr);
+              }
+              .main__plus-wrapper {
+                display: flex;
+                justify-content: flex-start;
+                column-gap: 14px;
+                .main__vert-white-line {
+                  width: 1px;
+                  height: 13px;
+                  margin-top: 3px;
+                  background-color: $text-light-color;
+                }
+                .main__plus-text {
+                  font-family: $font;
+                  font-weight: 400;
+                  font-size: 18px;
+                  line-height: 20px;
+                  color: #c8d7eb;
+                  transition: 0.3s;
+                  &:hover {
+                    transform: scale(1.05);
+                    color: $text-light-color;
+                  }
+                }
+              }
+            }
+            .main__leave-request-btn {
+              margin-left: 12px;
+              @include default-btn(
+                214px,
+                $text-light-color,
+                $btn-link-color,
+                10px
+              );
+            }
+          }
+          .main__video-wrapper {
+            position: relative;
+            @media (max-width: $tablet-l) {
+              display: none;
+            }
+            .main__video-click-btn {
+              position: absolute;
+              top: 147px;
+              left: 279px;
+              z-index: 1;
+              width: 94px;
+              height: 94px;
+              border: none;
+              background-color: transparent;
+              background-image: url(../../images/home/video-click-btn.svg);
+              background-size: cover;
+              cursor: pointer;
+              transition: 0.3s;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+            .main__video {
+              width: 652px;
+              height: 389px;
+              object-fit: fill;
+            }
+          }
+        }
+      }
+      .main__about-company-wrapper {
+        @extend %default-wrapper;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 70px;
+        margin-bottom: 124px;
+        @media (max-width: 1660px) {
+          padding-inline: 30px;
+        }
+        @media (max-width: $laptop-l) {
+          margin-bottom: 83px;
+        }
+        .main__about-company-info-wrapper {
+          display: flex;
+          justify-content: space-between;
+          column-gap: 20px;
+          @media (max-width: $phone-l) {
+            justify-content: center;
+            text-align: center;
+          }
+          .main__about-copany-logo-img-wrapper {
+            flex-basis: 25%;
+            @media (max-width: $phone-l) {
+              display: none;
+            }
+            .main__about-company-logo-img {
+              max-width: 396px;
+              width: 100%;
+              height: max-content;
+            }
+          }
+          .main__about-company-text-wrapper {
+            flex-basis: 71%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 20px;
+            @media (max-width: $phone-l) {
+              flex-basis: 100%;
+            }
+            .main__about-company-headline {
+              @include default-h($text-light-color);
+              @media (max-width: $phone-l) {
+                font-size: 30px;
+                line-height: 31px;
+              }
+              @media (max-width: $phone-m) {
+                font-size: 28px;
+                line-height: 29px;
+              }
+            }
+            .main__about-company-text {
+              @include default-p($text-light-color);
+            }
+          }
+        }
+        .main__about-company-emp-wrapper {
+          display: flex;
+          justify-content: space-between;
+          column-gap: 38px;
+          @media (max-width: $tablet-l) {
+            flex-direction: column;
+            row-gap: 50px;
+          }
+        }
+      }
+      .main__work-principles-wrapper {
+        @extend %default-wrapper;
+        margin-bottom: 160px;
+        @media (max-width: 1660px) {
+          padding-inline: 30px;
+        }
+        @media (max-width: $laptop-l) {
+          margin-bottom: 107px;
+        }
+        .main__work-principles-headline {
+          @include default-h($text-light-color);
+          margin-bottom: 59px;
+          text-align: center;
+          @media (max-width: $phone-l) {
+            font-size: 30px;
+            line-height: 31px;
+          }
+          @media (max-width: $phone-m) {
+            font-size: 28px;
+            line-height: 29px;
+          }
+        }
+        .main__work-cards-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          row-gap: 105px;
+        }
+      }
+      .main__why-we-wrapper {
+        @extend %default-wrapper;
+        margin-bottom: 161px;
+        @media (max-width: 1660px) {
+          padding-inline: 30px;
+        }
+        @media (max-width: $laptop-l) {
+          margin-bottom: 107px;
+        }
+        .main__why-we-headline {
+          @include default-h($text-light-color);
+          margin-bottom: 56px;
+          text-align: center;
+          @media (max-width: $phone-l) {
+            font-size: 30px;
+            line-height: 31px;
+          }
+          @media (max-width: $phone-m) {
+            font-size: 28px;
+            line-height: 29px;
+          }
+        }
+        .main__why-we-cards-wrapper {
+          display: grid;
+          gap: 35px;
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-columns: repeat(3, 1fr);
+          @media (max-width: $pc-s) {
+            justify-items: center;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+          }
+          @media (max-width: $laptop-s) {
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+          }
+          .main__why-we-map-img {
+            max-width: 507px;
+            width: 100%;
+            height: max-content;
+          }
+        }
+      }
+      .main__map-box {
+        margin-bottom: 135px;
+        @media (max-width: $laptop-l) {
+          margin-bottom: 90px;
+        }
+      }
+      .main__questions-wrapper {
+        @extend %default-wrapper;
+        @media (max-width: 1660px) {
+          padding-inline: 30px;
+        }
+        .main__questions-headline {
+          @include default-h($text-light-color);
+          margin-bottom: 30px;
+          @media (max-width: $phone-l) {
+            font-size: 30px;
+            line-height: 31px;
+          }
+          @media (max-width: $laptop-m) {
+            text-align: center;
+          }
+          @media (max-width: $phone-m) {
+            font-size: 28px;
+            line-height: 29px;
+          }
+        }
+        .main__questions-info-form-wrapper {
+          display: flex;
+          justify-content: space-between;
+          @media (max-width: $laptop-m) {
+            flex-direction: column;
+            row-gap: 20px;
+          }
+          .main__questions-info-wrapper {
+            flex-basis: 49%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 41px;
+            @media (max-width: $laptop-m) {
+              align-items: center;
+              text-align: center;
+            }
+            .main__questions-text {
+              @include default-p($text-light-color);
+            }
+            .main__questions-mail-phone {
+              max-width: 298px;
+              font-family: $font;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 27px;
+              color: $text-light-color;
+              &_bold {
+                font-weight: 700;
+              }
+            }
+          }
+          .main__questions-form {
+            flex-basis: 43%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 14px;
+            .main__form-name-tel-wrapper {
+              display: flex;
+              justify-content: space-between;
+              column-gap: 14px;
+              @media (max-width: $laptop-m) {
+                flex-direction: column;
+                row-gap: 14px;
+              }
+              .main__form-input-name,
+              .main__form-input-phone {
+                border: none;
+                outline: none;
+                text-overflow: ellipsis;
+                @include default-p($text-blue-color);
+                max-width: 330px;
+                width: 100%;
+                min-height: 48px;
+                padding: 10px 20px;
+                border-radius: 10px;
+                &::placeholder {
+                  @include default-p($text-blue-color);
+                }
+                @media (max-width: $laptop-m) {
+                  max-width: none;
+                }
+              }
+            }
+            .main__form-textarea {
+              flex-grow: 1;
+              resize: none;
+              border: none;
+              outline: none;
+              text-overflow: ellipsis;
+              @include default-p($text-blue-color);
+              width: 100%;
+              min-height: 130px;
+              padding: 10px 20px;
+              border-radius: 10px;
+              &::placeholder {
+                @include default-p($text-blue-color);
+              }
+            }
+            .main__form-btn-info-wrapper {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              column-gap: 26px;
+              @media (max-width: $laptop-m) {
+                justify-content: center;
+              }
+              @media (max-width: $phone-m) {
+                flex-direction: column;
+                text-align: center;
+                row-gap: 20px;
+              }
+              .main__form-submit-btn {
+                margin-left: 10px;
+                padding-inline: 10px;
+                @include default-btn(
+                  214px,
+                  $text-light-color,
+                  $btn-link-color,
+                  10px
+                );
+              }
+              .main__form-btn-note {
+                max-width: 280px;
+                font-family: $font;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: $text-light-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

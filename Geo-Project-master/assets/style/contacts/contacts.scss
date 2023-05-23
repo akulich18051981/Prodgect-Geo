@@ -1,0 +1,230 @@
+@import "../globalStyle/vars";
+@import "../globalStyle/template";
+@import "../globalStyle/header";
+@import "../globalStyle/maps";
+@import "../globalStyle/footer";
+
+// Author: Pavel
+
+.main {
+  padding-block: 117px 88px;
+  @media (max-width: $laptop-l) {
+    padding-block: 59px 44px;
+  }
+  @media (max-width: $tablet-l) {
+    padding-block: 30px 22px;
+  }
+  background-color: #f1f4f8;
+  &__container {
+    max-width: 1920px;
+    width: 100%;
+    margin-top: 0;
+    margin-inline: auto;
+    .main__all-questions-wrapper {
+      margin-bottom: 65px;
+      @extend %default-wrapper;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 60px;
+      @media (max-width: 1660px) {
+        padding-inline: 30px;
+      }
+      @media (max-width: $laptop-l) {
+        margin-bottom: 33px;
+      }
+      @media (max-width: $laptop-s) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+      }
+      .main__headline-and-socials-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 28px;
+        @media (max-width: $laptop-s) {
+          text-align: center;
+          align-items: center;
+        }
+        .main__headline {
+          font-family: $font;
+          font-weight: 700;
+          font-size: 45px;
+          line-height: 56px;
+          color: $text-dark-color;
+          &_blue {
+            color: $btn-link-dark-color;
+          }
+          @media (max-width: $phone-l) {
+            font-size: 30px;
+            line-height: 36px;
+          }
+        }
+        .main__socials-icons-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          column-gap: 24px;
+        }
+      }
+      .main__contacts-wrapper {
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 342px 203px;
+        @media (max-width: $pc-s) {
+          grid-template-rows: repeat(4, 1fr);
+          grid-template-columns: 342px;
+        }
+        @media (max-width: $phone-l) {
+            grid-template-rows: repeat(4, auto);
+            grid-template-columns: 1fr;
+          }
+      }
+    }
+    .main__map-box {
+      margin-bottom: 79px;
+      @media (max-width: $laptop-l) {
+        margin-bottom: 40px;
+      }
+      @media (max-width: $tablet-l) {
+        display: none;
+      }
+    }
+    .main__questions-wrapper {
+      @extend %default-wrapper;
+      @media (max-width: 1660px) {
+        padding-inline: 30px;
+      }
+      .main__questions-headline {
+        @include default-h($text-dark-color);
+        margin-bottom: 30px;
+        @media (max-width: $phone-l) {
+          font-size: 30px;
+          line-height: 31px;
+        }
+        @media (max-width: $laptop-m) {
+          text-align: center;
+        }
+        @media (max-width: $phone-m) {
+          font-size: 28px;
+          line-height: 29px;
+        }
+      }
+      .main__questions-info-form-wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $laptop-m) {
+          flex-direction: column;
+          row-gap: 20px;
+        }
+        .main__questions-info-wrapper {
+          flex-basis: 49%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          row-gap: 41px;
+          @media (max-width: $laptop-m) {
+            align-items: center;
+            text-align: center;
+          }
+          .main__questions-text {
+            @include default-p($text-blue-color);
+          }
+          .main__questions-mail-phone {
+            max-width: 298px;
+            font-family: $font;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: $text-black-color;
+            &_bold {
+              font-weight: 700;
+              color: $btn-digit-hover-color;
+            }
+          }
+        }
+        .main__questions-form {
+          flex-basis: 43%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          row-gap: 14px;
+          .main__form-name-tel-wrapper {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 14px;
+            @media (max-width: $laptop-m) {
+              flex-direction: column;
+              row-gap: 14px;
+            }
+            .main__form-input-name,
+            .main__form-input-phone {
+              border: none;
+              outline: none;
+              text-overflow: ellipsis;
+              @include default-p($text-blue-color);
+              max-width: 330px;
+              width: 100%;
+              min-height: 48px;
+              padding: 10px 20px;
+              &::placeholder {
+                @include default-p($text-blue-color);
+              }
+              @media (max-width: $laptop-m) {
+                max-width: none;
+              }
+            }
+          }
+          .main__form-textarea {
+            flex-grow: 1;
+            resize: none;
+            border: none;
+            outline: none;
+            text-overflow: ellipsis;
+            @include default-p($text-blue-color);
+            width: 100%;
+            min-height: 130px;
+            padding: 10px 20px;
+            &::placeholder {
+              @include default-p($text-blue-color);
+            }
+          }
+          .main__form-btn-info-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 26px;
+            @media (max-width: $laptop-m) {
+              justify-content: center;
+            }
+            @media (max-width: $phone-m) {
+              flex-direction: column;
+              text-align: center;
+              row-gap: 20px;
+            }
+            .main__form-submit-btn {
+              margin-left: 10px;
+              padding-inline: 10px;
+              @include default-btn(
+                214px,
+                $text-light-color,
+                $btn-link-dark-color
+              );
+            }
+            .main__form-btn-note {
+              max-width: 280px;
+              font-family: $font;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 20px;
+              color: $text-blue-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import "./vars";
+@import "./template";
+
+// Author: Olga
+// Refactored by Pavel
+
+.contacts-info-block {
+  display: flex;
+  column-gap: 10px;
+  &__icon {
+    width: 21px;
+    height: 21px;
+  }
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    .contacts-info-block__headline {
+      font-family: $font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      color: $text-dark-color;
+    }
+    .contacts-info-block__description {
+      font-family: $font;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      color: $text-gray-color;
+    }
+  }
+}
+
+.map-box {
+  position: relative;
+  background-color: #f1f4f8;
+  @media (max-width: $tablet-l) {
+    height: auto;
+    padding-block: 12%;
+    padding-inline: 20px;
+  }
+  &__all-info-wrapper {
+    max-width: 693px;
+    width: 100%;
+    position: absolute;
+    top: 115px;
+    left: 8.33%;
+    background-color: $text-light-color;
+    @media (max-width: $laptop-l) {
+      max-width: 450px;
+      top: 95px;
+    }
+    @media (max-width: $tablet-l) {
+      position: static;
+      margin: 0 auto;
+    }
+    .map-box__headlines-and-info-wrapper {
+      padding: 35px 47px;
+      @media (max-width: $laptop-l) {
+        padding: 15px 20px;
+      }
+      .map-box__headline {
+        font-family: $font;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 56px;
+        color: $text-dark-color;
+        @media (max-width: $phone-l) {
+          font-size: 30px;
+          line-height: 37px;
+        }
+      }
+      .map-box__haedline-info-site {
+        margin-bottom: 14px;
+        font-family: $font;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 46px;
+        color: $btn-link-dark-color;
+        @media (max-width: $phone-l) {
+          font-size: 24px;
+          line-height: 31px;
+        }
+      }
+      .map-box__contacts-wrapper {
+        display: grid;
+        row-gap: 30px;
+        column-gap: 30px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 342px 1fr;
+        @media (max-width: $laptop-l) {
+          row-gap: 10px;
+          column-gap: 10px;
+          grid-template-rows: 3fr 2fr 2fr 2fr;
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+  }
+  &__socials-btn-wrapper {
+    padding: 18px 45px;
+    @media (max-width: $laptop-l) {
+      padding: 12px 30px;
+    }
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #dfdfdf;
+    .map-box__socials-icons-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 24px;
+      @media (max-width: $phone-l) {
+        display: none;
+      }
+    }
+    .map-box__btn-make-request {
+      @include default-btn(214px, $text-light-color, $btn-link-dark-color);
+    }
+  }
+  &__map {
+    @media (max-width: $tablet-l) {
+      display: none;
+    }
+  }
+}

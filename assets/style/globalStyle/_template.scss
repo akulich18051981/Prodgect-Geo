@@ -1,0 +1,81 @@
+@import "./vars";
+
+// Global container of whole page
+.global-container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// This class is needed to hide elements (by adding this class)
+.hidden-element {
+  display: none !important;
+}
+
+// This class is needed to make elements appear (by adding this class)
+.appeared-display-block {
+  display: block !important;
+}
+
+// This class is needed to make elements appear (by adding this class)
+.appeared-inline-block {
+  display: inline-block !important;
+}
+
+// This class is needed to make elements appear (by adding this class)
+.appeared-inline {
+  display: inline !important;
+}
+
+// This class is needed to make elements appear (by adding this class)
+.appeared-flex {
+  display: flex !important;
+}
+
+// Default settings of wrapper for content (margin-bottom is possible)
+%default-wrapper {
+  max-width: 1600px;
+  width: 100%;
+  margin-top: 0;
+  margin-inline: auto;
+}
+
+// Default settings of headlines, you only need to choose color: $text-light-color or $text-dark-color
+@mixin default-h($text-color) {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 46px;
+  color: $text-color;
+}
+
+// Default settings of paragraphs, you only need to choose color
+@mixin default-p($text-color) {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: $text-color;
+}
+
+// Mixin for button, already uses some default settings, but unique parameters are still needed
+// You don't need to give border-radius if you don't need it (default value: 0)
+@mixin default-btn($max-width, $text-color, $bg-color, $border-radius: 0) {
+  max-width: $max-width;
+  width: 100%;
+  padding-block: 16px 19px;
+  font-family: $font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: $text-color;
+  background-color: $bg-color;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

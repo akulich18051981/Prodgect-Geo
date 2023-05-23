@@ -1,0 +1,132 @@
+@import "../globalStyle/vars";
+@import "../globalStyle/template";
+@import "../globalStyle/header";
+@import "../globalStyle/maps";
+@import "../globalStyle/footer";
+
+// Author: Olga
+// Refactored by Pavel
+
+.work-card {
+  padding-block: 84px;
+  background: #f1f4f8;
+  &_reverse {
+    background: url(../../images/services/crystal-background.png);
+    background-size: cover;
+    .work-card__general-wrapper {
+      @media (max-width: $pc-s) {
+        flex-direction: column-reverse;
+        row-gap: 20px;
+        align-items: center;
+      }
+    }
+  }
+  &__general-wrapper {
+    @extend %default-wrapper;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 65px;
+    column-gap: 20px;
+    @media (max-width: $pc-s) {
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: center;
+    }
+    .work-card__img-wrapper {
+      flex-basis: 47%;
+      .work-card__img {
+        max-width: 751px;
+        &_less {
+          max-width: 740px;
+        }
+        width: 100%;
+        height: max-content;
+      }
+    }
+    .work-card__info-wrapper {
+      flex-basis: 49%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      row-gap: 20px;
+      @media (max-width: $pc-s) {
+        align-items: center;
+        text-align: center;
+      }
+      .work-card__headline {
+        padding-left: 10px;
+        @media (max-width: $pc-s) {
+          border-left: none;
+          padding-left: 0;
+        }
+        @include default-h($text-dark-color);
+        @media (max-width: $phone-l) {
+          font-size: 30px;
+          line-height: 31px;
+        }
+        @media (max-width: $phone-m) {
+          font-size: 28px;
+          line-height: 29px;
+        }
+      }
+      .work-card__text {
+        padding-left: 10px;
+        @include default-p($text-blue-color);
+      }
+      .work-card__btn {
+        @include default-btn(237px, $text-light-color, $btn-link-dark-color);
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.main {
+  .global-container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f1f4f8;
+    .main__services {
+      font-family: $font;
+      min-height: 420px;
+      background-image: url(../../images/services/bg-machines.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding-inline: 20px;
+      .main__services-title {
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 55px;
+        text-align: center;
+        color: $text-light-color;
+        padding: 107px 0 31px 0;
+        @media (max-width: $tablet-l) {
+          font-size: 38px;
+          line-height: 35px;
+        }
+      }
+      .main__services-title-text {
+        margin-inline: auto;
+        @include default-p($text-light-color);
+        max-width: 892px;
+        text-align: center;
+        @media (max-width: $tablet-l) {
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+    .main__work-cards-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media (max-width: 1660px) {
+        padding-inline: 30px;
+      }
+    }
+  }
+}

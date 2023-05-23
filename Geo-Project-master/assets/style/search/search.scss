@@ -1,0 +1,92 @@
+@import "../globalStyle/vars";
+@import "../globalStyle/template";
+@import "../globalStyle/header";
+@import "../globalStyle/footer";
+
+// Author: Pavel
+
+.html {
+  height: 100%;
+  .body {
+    height: 100%;
+    .global-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .main {
+        flex-grow: 1;
+        background-color: #f1f4f8;
+        &__container {
+          padding-inline: 30px;
+          height: 100%;
+          max-width: 1920px;
+          width: 100%;
+          margin-top: 0;
+          margin-inline: auto;
+          .main__search-wrapper {
+            padding-block: 113px 151px;
+            max-width: 729px;
+            width: 100%;
+            margin-top: 0;
+            margin-inline: auto;
+            .main__search-form {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              row-gap: 36px;
+              .main__search-headline {
+                @include default-h($text-dark-color);
+                text-align: center;
+              }
+              .main__search-line-wrapper {
+                max-width: 729px;
+                width: 100%;
+                display: flex;
+                .main__form-search-text {
+                  border: none;
+                  outline: none;
+                  text-overflow: ellipsis;
+                  @include default-p($text-blue-color);
+                  max-width: 651px;
+                  width: 100%;
+                  min-height: 68px;
+                  padding: 20px 25px;
+                  &::placeholder {
+                    @include default-p($text-blue-color);
+                  }
+                }
+                .main__form-search-btn-wrapper {
+                  padding: 20px 25px;
+                  background-color: white;
+                  .main__form-search-btn {
+                    width: 28px;
+                    height: 28px;
+                    background: url(../../images/search/loupe-icon.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    border: none;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {
+                      transform: scale(1.5);
+                    }
+                  }
+                }
+              }
+              .main__form-submit-query-btn {
+                padding-inline: 10px;
+                @include default-btn(
+                  196px,
+                  $text-light-color,
+                  $btn-link-dark-color
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

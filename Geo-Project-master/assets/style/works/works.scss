@@ -1,0 +1,403 @@
+@import "../globalStyle/vars";
+@import "../globalStyle/template";
+@import "../globalStyle/header";
+@import "../globalStyle/maps";
+@import "../globalStyle/footer";
+
+// Author: Oksana
+
+.main {
+  font-family: $font;
+  background-color: #f1f4f8; // Pasha: "D9D9D9" --> "#D9D9D9"
+  .main__global-container-title {
+    background-image: url(../../images/works/bg-drilling.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 419px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 102px;
+    @media (max-width: $laptop-l) {
+      background-position: center;
+      margin-bottom: 42px;
+    }
+    @media (max-width: $phone-m) {
+      margin-bottom: 15px;
+    }
+    .main__global-container-title-text {
+      padding-inline: 20px;
+      max-width: 813px;
+      width: 100%;
+      @include default-p($text-light-color);
+      text-align: center;
+      @media (max-width: $tablet-l) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+  .main__title-heading {
+    max-width: 892px;
+    margin-bottom: 31px;
+    font-family: "$font";
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 55px;
+    text-align: center;
+    color: $text-light-color;
+    @media (max-width: $tablet-l) {
+      font-size: 38px;
+      line-height: 35px;
+    }
+  }
+  .main__wrapper {
+    @extend %default-wrapper;
+    @media (max-width: 1650px) {
+      padding-inline: 20px;
+    }
+    .main__wrapper-common {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 20px;
+      @media (max-width: $pc-m) {
+        width: 100%;
+      }
+      @media (max-width: $laptop-l) {
+        flex-direction: column-reverse;
+        row-gap: 5px;
+        align-items: center;
+      }
+      @media (max-width: $phone-m) {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .main__wrapper-common-picture {
+        height: max-content;
+        max-width: 47%;
+        @media (max-width: $laptop-l) {
+          max-width: 100%;
+        }
+      }
+      .main__wrapper-common-text {
+        max-width: 800px;
+        @media (max-width: $laptop-l) {
+          max-width: none;
+        }
+      }
+      .main__wrapper-common-text-paragrph {
+        padding-inline: 10px;
+        @include default-p($text-blue-color);
+        margin-top: 20px;
+        @media (max-width: $phone-m) {
+          padding: 0;
+        }
+      }
+    }
+    .main__wrapper-minerals-title {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 28px;
+      color: $text-black-color;
+      @media (max-width: $phone-l) {
+        margin-top: 20px;
+      }
+      @media (max-width: $phone-m) {
+        font-size: 25px;
+        line-height: 26px;
+      }
+    }
+    .main__wrapper-common-text-basic {
+      margin-bottom: 100px;
+      @media (max-width: $pc-m) {
+        margin-bottom: 30px;
+      }
+    }
+    .main__wrapper-common-text-paragrph {
+      @include default-p($text-blue-color);
+      margin-bottom: 20px;
+      @media (max-width: $pc-m) {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-right: 20px;
+      }
+    }
+  }
+  .main__wrapper-common-best {
+    max-width: 1480px;
+    min-height: 98px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    @media (max-width: $phone-m) {
+      flex-wrap: wrap;
+    }
+    .main__wrapper-common-best-item {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      margin-bottom: 50px;
+      @media (max-width: $phone-l) {
+        margin-bottom: 10px;
+      }
+
+      .main__wrapper-common-best-item-picture {
+        margin-right: 15px;
+      }
+      @media (max-width: $phone-l) {
+        flex-wrap: wrap;
+      }
+
+      .main__wrapper-common-best-item-text {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .main__common-text-heading {
+    @include default-h($text-dark-color);
+    @media (max-width: $pc-m) {
+      margin: 0 10px 0 10px;
+    }
+    @media (max-width: $tablet-l) {
+      font-size: 35px;
+      line-height: 32px;
+    }
+    @media (max-width: $phone-m) {
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 26px;
+    }
+  }
+  .title-best {
+    max-width: 181;
+    min-height: 38px;
+    font-family: $font;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    align-items: center;
+    color: $btn-link-dark-color;
+  }
+  .text-best {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: $text-blue-color;
+    max-width: 306px;
+    width: 100%;
+    min-height: 57px;
+    @media (max-width: $phone-m) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  .main__wrapper-certificates {
+    margin-bottom: 46px;
+    @media (max-width: $pc-m) {
+      margin-bottom: 26px;
+    }
+    @media (max-width: $phone-m) {
+      margin-bottom: 5px;
+    }
+    .main__wrapper-certificates-image {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .main__wrapper-certificates-picture {
+        @media (max-width: $pc-m) {
+          display: flex;
+          margin: 0 auto;
+        }
+        @media (max-width: $laptop-l) {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .main__wrapper-certificates-common {
+      max-width: 513px;
+      min-height: 91px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 20px;
+      @media (max-width: $pc-m) {
+        margin-top: 50px;
+      }
+      @media (max-width: $phone-l) {
+        margin-top: 30px;
+        min-height: 41px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .main__wrapper-common-why {
+    min-height: 432px;
+    display: flex;
+    @media (max-width: $pc-m) {
+      flex-wrap: wrap;
+    }
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+    margin-bottom: 35px;
+    @media (max-width: $pc-m) {
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    @media (max-width: $phone-m) {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .main__wrapper-common-why-picture {
+      .main__wrapper-common-why-pic {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .main__wrapper-common-why-text {
+      margin-top: 55px;
+      width: 50%;
+      @media (max-width: $pc-m) {
+        width: 100%;
+        margin-top: 20px;
+      }
+      @media (max-width: $phone-l) {
+        margin-top: 10px;
+      }
+      .main__common-text-heading {
+        margin-bottom: 44px;
+        margin-top: 20px;
+        @media (max-width: $pc-m) {
+          text-align: center;
+        }
+        @media (max-width: $phone-m) {
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 26px;
+        }
+      }
+      .main__wrapper-common-best-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: $pc-m) {
+          justify-content: center;
+        }
+        .main__wrapper-common-best-item {
+          display: flex;
+          justify-content: start;
+          align-items: start;
+          margin-bottom: 50px;
+          @media (max-width: $phone-m) {
+            margin-bottom: 5px;
+          }
+          .main__wrapper-common-best-item-picture {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+  .main__container-additional {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url(../../images/works/blue-crystal-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-block: 10px;
+    @media (max-width: $pc-m) {
+      padding-inline: 20px;
+    }
+
+    .main__link {
+      display: inline-block;
+      text-decoration: none;
+      margin-bottom: 95px;
+      @include default-btn(214px, $text-light-color, $btn-link-dark-color);
+      @media (max-width: $pc-m) {
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+    .main__common-text-heading {
+      padding-top: 110px;
+      margin-bottom: 39px;
+      @media (max-width: $pc-m) {
+        padding-top: 30px;
+      }
+      @media (max-width: $phone-l) {
+        padding-top: 5px;
+      }
+      @media (max-width: $phone-m) {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 26px;
+      }
+    }
+    .main__wrapper-projecting {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 56px;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      column-gap: 20px;
+      @media (max-width: $phone-l) {
+        margin-bottom: 20px;
+      }
+      .main__wrapper-projecting-item {
+        .main__wrapper-projecting-item-img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .main__wrapper-projecting-item-text {
+        background-color: white;
+        max-width: 508px;
+        min-height: 224px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 20px 16px 28px 32px;
+        .main__wrapper-projecting-item-date {
+          background-color: #f1f4f8;
+          font-family: $font;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 26px;
+          color: $text-blue-color;
+          margin: 20px 0 14px 0;
+        }
+        .main__wrapper-projecting-item-heading {
+          max-width: 350px;
+          min-height: 66px;
+          font-family: $font;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 26px;
+          color: $text-black-color;
+          text-align: start;
+        }
+        .main__wrapper-projecting-item-content {
+          max-width: 460px;
+          min-height: 74px;
+          font-family: $font;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          color: $text-blue-color;
+          text-align: start;
+        }
+      }
+    }
+  }
+}

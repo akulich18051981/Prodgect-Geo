@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/reset/reset.css" />
+    <link rel="stylesheet" href="./assets/style/contacts/contacts.css" />
+    <title>Contacts</title>
+    <!-- Author: Pavel -->
+  </head>
+  <body>
+    <div class="global-container">
+      <header class="header">
+        <div class="header__container">
+          <img
+            src="./assets/images/global/header/logo.svg"
+            alt="logo"
+            class="header__logo"
+          />
+          <button class="header__burger-menu-btn" id="burger-menu-btn"></button>
+          <div class="header__nav-info-wrapper" id="header-nav-info">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-list-item">
+                  <a href="./home.html" class="header__link_bold header__link"
+                    >Главная</a
+                  >
+                </li>
+                <li class="header__nav-list-item">
+                  <a href="./about.html" class="header__link">О компании</a>
+                </li>
+                <li class="header__nav-list-item">
+                  <a href="./services.html" class="header__link">Услуги</a>
+                </li>
+                <li class="header__nav-list-item">
+                  <a href="./news.html" class="header__link">Новости</a>
+                </li>
+                <li class="header__nav-list-item">
+                  <a href="./contacts.html" class="header__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__info-wrapper">
+              <div class="header__phone-wrapper">
+                <img
+                  src="./assets/images/global/header/phone-keys.svg"
+                  alt="phone keys"
+                  class="header__phone-keys-icon"
+                />
+                <div class="header__phone-num-wrapper">
+                  <span class="header__phone-num">+7 (7172) 24 72 80</span>
+                  <button class="header__order-call">Заказать звонок</button>
+                </div>
+              </div>
+              <div class="header__white-vert-line"></div>
+              <a class="header__search-link-btn" href="./search.html"></a>
+              <div class="header__language-wrapper" id="curr-language-wrapper">
+                <img
+                  src="./assets/images/global/header/ru.png"
+                  alt="russian"
+                  class="header__language-flag-img"
+                  id="curr-language-img"
+                />
+                <div class="header__select-language-wrapper">
+                  <span class="header__curr-language" id="curr-language-text"
+                    >RU</span
+                  >
+                  <button
+                    class="header__choose-language-btn"
+                    id="arrow-img"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__languages-list" id="languages-list">
+            <div class="header__language-item-wrapper" id="language-en-wrapper">
+              <img
+                src="./assets/images/global/header/en.png"
+                alt="Английский (Великобритания)"
+                class="header__language-item-img"
+              />
+              <span class="header__language-item-text">Английский (EN)</span>
+            </div>
+            <div class="header__language-item-wrapper" id="language-us-wrapper">
+              <img
+                src="./assets/images/global/header/us.png"
+                alt="Английский (США)"
+                class="header__language-item-img"
+              />
+              <span class="header__language-item-text">Английский (US)</span>
+            </div>
+            <div class="header__language-item-wrapper" id="language-by-wrapper">
+              <img
+                src="./assets/images/global/header/by.png"
+                alt="Белорусский"
+                class="header__language-item-img"
+              />
+              <span class="header__language-item-text">Белорусский (BY)</span>
+            </div>
+            <div class="header__language-item-wrapper" id="language-kz-wrapper">
+              <img
+                src="./assets/images/global/header/kz.png"
+                alt="Казахский"
+                class="header__language-item-img"
+              />
+              <span class="header__language-item-text">Казахский (KZ)</span>
+            </div>
+            <div class="header__language-item-wrapper" id="language-ru-wrapper">
+              <img
+                src="./assets/images/global/header/ru.png"
+                alt="Русский"
+                class="header__language-item-img"
+              />
+              <span class="header__language-item-text">Русский (RU)</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main__container">
+          <div class="main__all-questions-wrapper">
+            <div class="main__headline-and-socials-wrapper">
+              <h1 class="main__headline">
+                По всем вопросам
+                <span class="main__headline_blue main__headline"
+                  >info@moperating.kz</span
+                >
+              </h1>
+              <div class="main__socials-icons-wrapper">
+                <a
+                  href="https://www.instagram.com/"
+                  class="main__link-to-socials"
+                >
+                  <img
+                    src="./assets/images/contacts/instagram.svg"
+                    alt="instagram"
+                    class="main__link-img"
+                  />
+                </a>
+                <a href="https://vk.com/" class="main__link-to-socials">
+                  <img
+                    src="./assets/images/contacts/vk.svg"
+                    alt="vk"
+                    class="main__link-img"
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/"
+                  class="main__link-to-socials"
+                >
+                  <img
+                    src="./assets/images/contacts/facebook.svg"
+                    alt="facebook"
+                    class="main__link-img"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="main__contacts-wrapper">
+              <div class="contacts-info-block">
+                <img
+                  src="./assets/images/contacts/address.svg"
+                  alt="address"
+                  class="contacts-info-block__icon"
+                />
+                <div class="contacts-info-block__info-wrapper">
+                  <span class="contacts-info-block__headline">Адрес</span>
+                  <span class="contacts-info-block__description">
+                    Пр-т Мангилик Ел, 55/21, эт 1, оф. 164
+                  </span>
+                </div>
+              </div>
+              <div class="contacts-info-block">
+                <img
+                  src="./assets/images/contacts/phone-keys.svg"
+                  alt="phone"
+                  class="contacts-info-block__icon"
+                />
+                <div class="contacts-info-block__info-wrapper">
+                  <span class="contacts-info-block__headline"
+                    >+7 (7172) 24 72 80</span
+                  >
+                  <span class="contacts-info-block__description"
+                    >с 9:00 до 18:00</span
+                  >
+                </div>
+              </div>
+              <div class="contacts-info-block">
+                <img
+                  src="./assets/images/contacts/clock.svg"
+                  alt="shedule"
+                  class="contacts-info-block__icon"
+                />
+                <div class="contacts-info-block__info-wrapper">
+                  <span class="contacts-info-block__headline"
+                    >График работы
+                  </span>
+                  <span class="contacts-info-block__description"
+                    >пн-вс (9:00-22:00)</span
+                  >
+                </div>
+              </div>
+              <div class="contacts-info-block">
+                <img
+                  src="./assets/images/contacts/whatsapp.svg"
+                  alt="whatsapp"
+                  class="contacts-info-block__icon"
+                />
+                <div class="contacts-info-block__info-wrapper">
+                  <span class="contacts-info-block__headline"
+                    >+7 (7172) 24 72 80</span
+                  >
+                  <span class="contacts-info-block__description">Whatsapp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="map-box main__map-box">
+            <div class="map-box__map">
+              <script
+                type="text/javascript"
+                charset="utf-8"
+                async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab3a8faba8fd4e452e57deaaf10db9da0e2a145fa5deb24003769f71282906054&amp;width=100%25&amp;height=570&amp;lang=ru_RU&amp;scroll=true"
+              ></script>
+            </div>
+          </div>
+          <div class="main__questions-wrapper">
+            <h2 class="main__questions-headline">Остались вопросы ?</h2>
+            <div class="main__questions-info-form-wrapper">
+              <div class="main__questions-info-wrapper">
+                <p class="main__questions-text">
+                  Мinerals Operating – это молодая компания, которая оказывает
+                  услуги в сфере недропользования на территории Казахстана. Мы
+                  одна из первых компаний являющихся лицензированным
+                  консультантом в сфере минеральных ресурсов (лицензия
+                  №AFSA-A-LA-2020-0004). Мinerals Operating зарегистрирована в
+                  Международном Финансовом Центре «Астана» (МФЦА) и осуществляет
+                  деятельность, основанную на нормах и принципах Английского
+                  общего права.
+                </p>
+                <span class="main__questions-mail-phone">
+                  Напишите нам
+                  <span
+                    class="main__questions-mail-phone_bold main__questions-mail-phone"
+                    >email.ru@mail.ru</span
+                  >
+                  или звоните
+                  <span
+                    class="main__questions-mail-phone_bold main__questions-mail-phone"
+                    >+7 (700) 555-55-66</span
+                  >
+                </span>
+              </div>
+              <form action="#" class="main__questions-form">
+                <div class="main__form-name-tel-wrapper">
+                  <input
+                    type="text"
+                    name="your-name"
+                    placeholder="Ваше имя"
+                    required
+                    class="main__form-input-name"
+                  />
+                  <input
+                    type="tel"
+                    name="your-phone"
+                    placeholder="Ваш телефон"
+                    required
+                    class="main__form-input-phone"
+                  />
+                </div>
+                <textarea
+                  name="your-message"
+                  placeholder="Ваше сообщение"
+                  required
+                  class="main__form-textarea"
+                ></textarea>
+                <div class="main__form-btn-info-wrapper">
+                  <button class="main__form-submit-btn">Оформить заявку</button>
+                  <span class="main__form-btn-note">
+                    При нажатии кнопки “отправить”, вы соглашаетесь на обработку
+                    данных
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__wr-footer">
+            <div class="footer__wr-info">
+              <img
+                src="./assets/images/global/footer/logo.png"
+                alt="logo"
+                class="footer__logo-img"
+              />
+              <p class="footer__text">
+                Мinerals Operating – это молодая компания, которая оказывает
+                услуги в сфере недропользования на территории Казахстана. Мы
+                одна из первых компаний являющихся лицензированным консультантом
+                в сфере минеральных ресурсов (лицензия №AFSA-A-LA-2020-0004).
+              </p>
+            </div>
+            <div class="footer__link-box_main footer__link-box">
+              <h3 class="footer__link-title">Основное</h3>
+              <a href="./home.html" class="footer__link">Главная</a>
+              <a href="./about.html" class="footer__link">О нас</a>
+              <a href="./services.html" class="footer__link">Услуги</a>
+              <a href="#" class="footer__link">Вакансии</a>
+            </div>
+            <div class="footer__link-box_nav footer__link-box">
+              <h3 class="footer__link-title">Навигация</h3>
+              <a href="./contacts.html" class="footer__link">Контакты</a>
+              <a href="#" class="footer__link">Помощь </a>
+              <a href="#" class="footer__link">Политика </a>
+              <a href="#" class="footer__link">Обратная связь</a>
+            </div>
+            <div class="footer__link-box_contacts footer__link-box">
+              <h3 class="footer__link-title">Контакты</h3>
+              <span class="footer__address">
+                РК, г. Нур-Султан, Проспект Мангилик Ел, 55/21, этаж 1, Блок
+                C4.2, офис 164
+              </span>
+              <div class="footer__number">
+                <img
+                  src="./assets/images/global/footer/phone-keys.svg"
+                  alt="phone"
+                />
+                <span class="footer__number-info">+7 (7172) 24 72 80</span>
+              </div>
+              <div class="footer__icons">
+                <a
+                  href="https://www.instagram.com/"
+                  class="footer__link_socials footer__link"
+                >
+                  <img
+                    src="./assets/images/global/footer/insta.svg"
+                    alt="instagram"
+                    class="footer__link-img"
+                  />
+                </a>
+                <a
+                  href="https://vk.com/"
+                  class="footer__link_socials footer__link"
+                >
+                  <img
+                    src="./assets/images/global/footer/vk.svg"
+                    alt="vk"
+                    class="footer__link-img"
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/"
+                  class="footer__link_socials footer__link"
+                >
+                  <img
+                    src="./assets/images/global/footer/facebook.svg"
+                    alt="facebook"
+                    class="footer__link-img"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright">
+            <span class="footer__copyright-text"
+              >&copy; 2021 Создание сайта maxico.kz</span
+            >
+            <span class="footer__copyright-text"
+              >Перепечатка и любое использование материалов возможно только при
+              наличии ссылки на первоисточник.</span
+            >
+          </div>
+        </div>
+      </footer>
+      <script src="./assets/scripts/toggleBurgerMenu.js"></script>
+      <script src="./assets/scripts/toggleLanguagesMenu.js"></script>
+    </div>
+  </body>
+</html>
